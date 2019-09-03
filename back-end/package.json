@@ -4,9 +4,27 @@
   "description": "If you’re reading this, then you’ve applied for a position at Scoutbase.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Carlos Gonzalez (https://www.linkedin.com/in/cgonzalezp91/)",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "core-util-is": "^1.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.4",
+    "graphql-tools": "^4.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.1"
+  }
 }

@@ -1,0 +1,30 @@
+type Movies {
+    _id: ID
+    title: String!,
+    year: Int,
+    rating: Float,
+    actors: [Actors]
+}
+
+type Actors {
+    _id: ID
+    name: String!,
+    birthday: String,
+    country: String,
+    directors: [Directors]
+}
+
+type Directors {
+    name: String!,
+    birthday: String,
+    country: String
+}
+
+type Query {
+    "Get all the Movies"
+    getMovies: [Movies]
+    "Get all the Actors"
+    getActors: [Actors]
+    "Get all the Directors"
+    getDirectors: [Directors]
+}
