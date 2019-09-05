@@ -1,7 +1,7 @@
-'use strict'
-const http = require('http'); //We need import http and https to create both servers
+'use strict' //Always use strict mode!
+const http = require('http'); //We need import http and https to create both servers (https is just for demostration)
 const https = require('https'); // we can't create both servers only with express
-const { makeExecutableSchema } = require('graphql-tools')
+const { makeExecutableSchema } = require('graphql-tools')//Give superpowers to GraphQL
 const express = require('express')
 const gqlMiddleware = require('express-graphql')
 const bodyParser = require("body-parser");
@@ -35,7 +35,7 @@ app.use('/graphql', gqlMiddleware({
 //     throw new Error('BROKEN') // Express will catch this on its own.
 //   })
 
-//ErrorHandlers
+//ErrorHandlers 
 app.use(logErrors)
 app.use(notFound)
 app.use(errorHandler)

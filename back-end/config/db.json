@@ -1,0 +1,94 @@
+{
+  "movies": [
+    {
+      "_id": "movieid 1",
+      "title": "Movie Title 1",
+      "year": "2015",
+      "rating": "2.2",
+      "actors": []
+    },
+    {
+      "_id": "movieid 2",
+      "title": "Movie Title 2",
+      "year": "2000",
+      "rating": "5.0",
+      "actors": []
+    },
+    {
+      "_id": "movieid 3",
+      "title": "Movie Title 3",
+      "year": "2010",
+      "rating": "3.9",
+      "actors": [
+        "actorid 1"
+      ]
+    }
+  ],
+  "actors": [
+    {
+      "_id": "actorid 1",
+      "name": "Actor Name 1",
+      "birthday": "1991-01-15",
+      "country": "Actor Country 1",
+      "directors": [
+        "directorid 1"
+      ]
+    },
+    {
+      "_id": "actorid 2",
+      "name": "Actor Name 2",
+      "birthday": "1989-07-10",
+      "country": "Actor Country 2",
+      "directors": []
+    },
+    {
+      "_id": "actorid 3",
+      "name": "Actor Name 3",
+      "birthday": "1995-12-01",
+      "country": "Actor Country 3",
+      "directors": []
+    }
+  ],
+  "directors": [
+    {
+      "_id": "directorid 1",
+      "name": "Director Name 1",
+      "birthday": "1990-04-05",
+      "country": "Director Country 1"
+    },
+    {
+      "_id": "directorid 2",
+      "name": "Director Name 2",
+      "birthday": "1981-05-22",
+      "country": "Director Country 2"
+    },
+    {
+      "_id": "directorid 3",
+      "name": "Director Name 3",
+      "birthday": "1985-10-29",
+      "country": "Director Country 3"
+    }
+  ],
+  "users": [
+    {
+      "_id": "user 1",
+      "name": "User Name 1",
+      "password": "pass1"
+    },
+    {
+      "_id": "3kv49151y8k04riyp3",
+      "name": "User 2",
+      "password": "$2b$10$iFC3Onqp7ynNHt2ugUOxVOd5A01z/V5Fhb3RSBLZIIyp29yRVyUzy"
+    },
+    {
+      "_id": "3kv49153uwk04rjgll",
+      "name": "User 2",
+      "password": "$2b$10$8otIbJre2v7W2lCps0f98.Oqc4bNJuGOhRVLeM0SxPGOYqGfS6Mwy"
+    },
+    {
+      "_id": "3kv4915kagk05i2piw",
+      "name": "User 2",
+      "password": "$2b$10$aOsCd7tEMemQ79BYXZxGEOFwg.Euv.Dv/Y/RqnG71TAgbseqJvGj2"
+    }
+  ]
+}

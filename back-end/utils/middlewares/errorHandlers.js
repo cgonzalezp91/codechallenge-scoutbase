@@ -1,5 +1,6 @@
 'use strict'
-
+// These are the defualt errors of express, but 
+// This way we can define or own coustom Errors with express
 const { config } = require('../../config')
 
 function withErrorStack(err, stack) {

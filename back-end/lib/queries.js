@@ -1,9 +1,9 @@
 'use strict'
 
-const db = require('./db.json')
+const db = require('../config/db.json')
 
 module.exports = {
-    getMovies: () => {return db.movies},
-    getActors: () => {return db.actors},
-    getDirectors: () => {return db.directors}
+    movies: () => {return db.movies},
+    getPeople: () => {return db.actors.concat(db.directors)}, // To Many same field names so i can create an interface
+    // getDirectors: () => {return db.directors}
 }

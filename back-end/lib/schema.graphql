@@ -1,12 +1,18 @@
 type Movies {
-    _id: ID
+    _id: String,
     title: String!,
     year: Int,
     rating: Float,
     actors: [Actors]
 }
 
-type Actors {
+interface Person { #Actors and Directors Share same type of info so i did a Person Type with an interface
+    name: String!,
+    birthday: String,
+    country: String,
+}
+
+type Actors implements Person {
     _id: ID
     name: String!,
     birthday: String,
@@ -14,17 +20,40 @@ type Actors {
     directors: [Directors]
 }
 
-type Directors {
+type Directors implements Person {    
     name: String!,
     birthday: String,
     country: String
 }
 
+type User {
+    _id: String!,
+    name: String,
+    password: String
+}
+
+type SigninPayload {
+    token: String!
+    user: User
+}
+
 type Query {
     "Get all the Movies"
-    getMovies: [Movies]
+    movies: [Movies]
     "Get all the Actors"
-    getActors: [Actors]
-    "Get all the Directors"
-    getDirectors: [Directors]
+    getPeople: [Person]
+    # "Get all the Directors"
+    # getDirectors: [Person]
+}
+input UserInput{
+    _id: String,
+    username: String,
+    password: String
+}
+
+type Mutation {
+    "Create a User"
+    createUser(input: UserInput!): SigninPayload!
+    "User Login"
+    login(input: UserInput!): SigninPayload!
 }

@@ -1,5 +1,5 @@
 'use strict'
-const db = require('./db.json')
+const db = require('../config/db.json')
 
 module.exports = {
     Movies: {
@@ -39,6 +39,14 @@ module.exports = {
             }
             else []            
             return directorsData
+        }
+    },
+    Person: {
+        __resolveType: (person,conext,info) => {
+            if(person.directors) {
+                return 'Actors'
+            } 
+             return 'Directors'
         }
     }
 
