@@ -1,4 +1,5 @@
 'use strict' //Always use strict mode!
+require('dotenv').config() // Initialice our .env file for variables
 const http = require('http'); //We need import http and https to create both servers (https is just for demostration)
 const https = require('https'); // we can't create both servers only with express
 const { makeExecutableSchema } = require('graphql-tools')//Give superpowers to GraphQL
@@ -7,7 +8,7 @@ const gqlMiddleware = require('express-graphql')
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const { logErrors, errorHandler, notFound } = require("./utils/middlewares/errorHandlers")
-const { config } = require('./config')
+const { PORT, SSLAUTH, SSLPORT, NODE_ENV } = process.env
 const { readFileSync } = require('fs')
 const { join } = require('path')
 const resolvers = require('./lib/resolvers')
@@ -40,16 +41,16 @@ app.use(logErrors)
 app.use(notFound)
 app.use(errorHandler)
 
-http.createServer(app).listen(config.port);
-console.log(`Listening http://localhost:${config.port}`)
-if (!config.dev) { // https will only be available on production mode
+http.createServer(app).listen(PORT);
+console.log(`Listening http://localhost:${PORT}`)
+if (NODE_ENV) { // https will only be available on production mode
     const sslOptions = {
         key: readFileSync('someSSLPrivateKey'),
         cert: readFileSync('someSSLCertificate'),
-        passphrase: config.sslauth
+        passphrase: SSLAUTH
     };
-    https.createServer(sslOptions, app).listen(config.sslport);
-    console.log(`Listening https://localhost:${config.sslport}`)
+    https.createServer(sslOptions, app).listen(SSLPORT);
+    console.log(`Listening https://localhost:${SSLPORT}`)
 }
     
 

@@ -1,4 +1,6 @@
 type Movies {
+    token: String,
+    scoutbase_rating: Float,
     _id: String,
     title: String!,
     year: Int,
@@ -39,7 +41,7 @@ type SigninPayload {
 
 type Query {
     "Get all the Movies"
-    movies: [Movies]
+    movies(token: String): [Movies]
     "Get all the Actors"
     getPeople: [Person]
     # "Get all the Directors"
