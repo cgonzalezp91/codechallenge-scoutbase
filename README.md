@@ -20,3 +20,9 @@ You have received this directory within the .zip archive.
   1. `Yaass` username – Yassin Askar, co-founder of Scoutbase
   2. `kuka` username – Kuanysh, consultant
 5. Expect a response within 10 working days after sharing the task, you’ll be contacted with the info you’ve provided during initial registration.
+
+
+## Comments
+
+Sorry for the later creation of repo, I could finish the back-end in like a week or less but a lot of things come up.
+Also I want to do the front-end too but I don't have so much time to invest right now, if you want to wait me I will try to do the Front-end in a chance
